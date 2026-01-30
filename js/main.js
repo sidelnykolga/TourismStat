@@ -43,25 +43,18 @@ const siteImg = {
   moreKs: "https://more.ks.ua/Media/pic/logo.jpg"
 };
 
-
-const NAMESPACE = "vidpochynok-site"; 
+const NAMESPACE = "vidpochynok-site";
 
 let currentPopularSite = null;
 
 async function goToSite(site) {
-  //await fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${site}/up`);
-
-  //updateMostPopular();
   window.open(siteUrls[site], "_blank");
 }
 
 async function getCount(site) {
   try {
-    //const res = await fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${site}`);
-
-
+    const res = await fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${site}`);
     if (!res.ok) return 0;
-    
     const data = await res.json();
     return data.value;
   } catch (e) {
@@ -73,9 +66,8 @@ async function updateMostPopular() {
   let maxCount = -1;
   let popularSite = null;
 
-  /*for (let site in siteUrls) {
-    const count = await getCount(site);*/
-    const count = 0;//await getCount('bukovel');
+  for (let site in siteUrls) {
+    const count = await getCount(site);
     if (count > maxCount) {
       maxCount = count;
       popularSite = site;
@@ -94,7 +86,5 @@ async function updateMostPopular() {
   footer.querySelector(".popular-site-img").src = siteImg[popularSite];
 }
 
-
 updateMostPopular();
-
 
