@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Відпочинок</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Обери свій відпочинок</h1>
+    </header>
+
+    <div class="choices">
+        <div class="choice-card" onclick="window.open('winter.html', '_blank')">
+            <img src="https://what.com.ua/wp-content/uploads/2018/12/b6c5d7c379c78d8959ec073141162625.jpg">
+            <h2>Зимовий відпочинок</h2>
+            <p>Лижі, гори та активний відпочинок.</p>
+        </div>
+
+        <div class="choice-card" onclick="window.open('thermal.html', '_blank')">
+            <img src="https://avialiga.ua/wp-content/uploads/2021/05/hot-spring.jpg">
+            <h2>Термальні джерела</h2>
+            <p>Релакс і відновлення здоровʼя.</p>
+        </div>
+
+        <div class="choice-card" onclick="window.open('sea.html', '_blank')">
+            <img src="https://klike.net/uploads/posts/2019-12/1576833923_38.jpg">
+            <h2>Море</h2>
+            <p>Сонце, пляж та спокій.</p>
+        </div>
+
+    </div>
+
+    <div class="most-popular-footer" onclick="goToSite(currentPopularSite)">
+        <div class="popular-title">Найпопулярніший сайт за версією наших користувачів</div>
+
+        <div class="popular-content">
+            <div class="popular-info">
+                <div class="popular-site-name">...</div>
+                <div>Переглядів: <span class="popular-site-count">0</span></div>
+            </div>
+            <div class="popular-image">
+                <img class="popular-site-img" src="">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
