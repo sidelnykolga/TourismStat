@@ -57,7 +57,7 @@ async function goToSite(site) {
 
 async function getCount(site) {
   try {
-    const res = await fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${site}`);
+    //const res = await fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${site}`);
 
 
     if (!res.ok) return 0;
@@ -96,4 +96,5 @@ async function updateMostPopular() {
 
 
 updateMostPopular();
+
 
