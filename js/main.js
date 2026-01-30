@@ -82,7 +82,7 @@ async function updateMostPopular() {
     }
   }
 
-  if (!popularSite) return 0;
+  if (!popularSite) return;
 
   currentPopularSite = popularSite;
 
@@ -96,3 +96,4 @@ async function updateMostPopular() {
 
 
 updateMostPopular();
+
